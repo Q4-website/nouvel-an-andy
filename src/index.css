@@ -433,48 +433,42 @@ button {
   justify-content: center;
 }
 
-.artwork-wrapper {
-  position: relative;
+.welcome-hero-media {
   width: 100%;
-  max-width: 580px;
-  aspect-ratio: 4 / 3;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: none;
-  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.artwork-image {
+.hero-full-artwork {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
+  max-width: 680px;
+  height: auto;
+  display: block;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  object-fit: contain;
+  animation: heroFloat 6s ease-in-out infinite;
+  will-change: transform;
+  transition: transform 0.3s ease;
 }
 
-.artwork-wrapper:hover .artwork-image {
-  transform: scale(1.03);
+.hero-full-artwork:hover {
+  animation-play-state: paused;
+  transform: scale(1.03) translateY(-8px);
 }
 
-.floating-lotus {
-  position: absolute;
-  pointer-events: none;
-  animation: floatLotus 4s ease-in-out infinite;
-}
-
-.lotus-1 {
-  top: 12px;
-  right: 18px;
-}
-
-.lotus-2 {
-  bottom: 24px;
-  left: 20px;
-  animation-delay: 2s;
-}
-
-@keyframes floatLotus {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(6deg); }
+@keyframes heroFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-14px) scale(1.018);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
 }
 
 /* ==========================================================================
@@ -1734,7 +1728,278 @@ button {
 .about-feature-box:hover,
 .light-timeline-card:hover,
 .preview-card:hover,
-.product-card:hover {
+.product-card:hover,
+.highlight-card:hover,
+.home-schedule-card:hover,
+.home-review-card:hover,
+.faq-card:hover {
   box-shadow: none !important;
 }
+
+/* ==========================================================================
+   NOUVELLES SECTIONS ACCUEIL (ENRICHI, SANS OMBRE, CLAIR & ÉLÉGANT)
+   ========================================================================== */
+
+.home-section-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.section-title-wrap {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.home-section-heading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: var(--text-dark);
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+.home-section-lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Highlights Grid */
+.home-highlights-section {
+  width: 100%;
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.highlight-card {
+  background: var(--bg-surface);
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 2.2rem;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.highlight-card:hover {
+  border-color: #c7d2fe;
+  transform: translateY(-3px);
+}
+
+.highlight-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.highlight-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.6rem;
+}
+
+.highlight-desc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+/* Schedule Teaser */
+.home-schedule-section {
+  width: 100%;
+  padding: 5rem 0;
+  background: #f8faff;
+}
+
+.schedule-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.home-schedule-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease;
+}
+
+.home-schedule-card:hover {
+  border-color: #c7d2fe;
+}
+
+.home-schedule-hour {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #ede9fe;
+  color: var(--primary-purple);
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.home-schedule-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.home-schedule-desc {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+
+.schedule-action-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Reviews Grid */
+.home-reviews-section {
+  width: 100%;
+  padding: 5rem 0;
+  background: #f8faff;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.home-review-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 2.2rem;
+  box-shadow: none !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-quote-icon {
+  color: #c7d2fe;
+  margin-bottom: 0.8rem;
+}
+
+.review-stars-row {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.review-text {
+  font-size: 0.98rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.review-author-wrap {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1rem;
+}
+
+.review-author-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.review-author-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* FAQ Section */
+.home-faq-section {
+  width: 100%;
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.faq-list {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.faq-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease;
+}
+
+.faq-card.open {
+  border-color: #c7d2fe;
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 1.6rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+}
+
+.faq-question-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.faq-arrow-icon {
+  color: var(--primary-indigo);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.faq-arrow-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.faq-answer-pane {
+  padding: 0 1.6rem 1.4rem 1.6rem;
+  color: var(--text-body);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  border-top: 1px solid #f1f5f9;
+}
+
 

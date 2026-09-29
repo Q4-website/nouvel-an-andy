@@ -1,26 +1,42 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
+import HomeHighlights from '../components/HomeHighlights';
+import HomeScheduleTeaser from '../components/HomeScheduleTeaser';
 import CtaBanner from '../components/CtaBanner';
 import FormulasSection from '../components/FormulasSection';
+import HomeReviews from '../components/HomeReviews';
+import HomeFaq from '../components/HomeFaq';
 
 export default function HomePage({ onSelectFormula, onNavigatePage }) {
   return (
     <div className="page-fade-in light-theme-page">
-      {/* Hero with Light Theme, 3D 2027 Artwork & Key Visible Countdown (NO FORM) */}
+      {/* Hero en thème clair avec compte à rebours clé et image 3D complète */}
       <Hero
         onExplore={() => onNavigatePage('about')}
         onNavigateTickets={() => onNavigatePage('tickets')}
       />
 
-      {/* About Section Teaser */}
+      {/* Points forts de l'expérience */}
+      <HomeHighlights />
+
+      {/* Présentation du Réveillon */}
       <AboutSection onLearnMore={() => onNavigatePage('about')} />
 
-      {/* Vibrant Purple/Indigo Gradient CTA Banner */}
+      {/* Déroulement de la soirée express */}
+      <HomeScheduleTeaser onNavigateProgramme={() => onNavigatePage('programme')} />
+
+      {/* Bannière Call-to-action */}
       <CtaBanner onExplore={() => onNavigatePage('tickets')} />
 
-      {/* Top 3 E-Commerce Formulas & Ticketing in FCFA */}
+      {/* Formules de billetterie en FCFA */}
       <FormulasSection onSelectFormula={onSelectFormula} />
+
+      {/* Avis et Témoignages */}
+      <HomeReviews />
+
+      {/* Questions Fréquentes */}
+      <HomeFaq />
     </div>
   );
 }

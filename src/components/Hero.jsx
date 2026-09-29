@@ -41,12 +41,12 @@ export default function Hero({ onExplore, onNavigateTickets }) {
         {/* Left Side: Typography, Prominent Key Countdown & CTA (NO FORM) */}
         <div className="welcome-hero-content">
           <h1 className="welcome-main-title">
-            <span className="title-lead">Let’s</span>
-            <span className="title-accent">Welcome 2027</span>
+            <span className="title-lead">Bienvenue en</span>
+            <span className="title-accent">2027 au Bénin</span>
           </h1>
 
           <p className="welcome-subtext">
-            Happy New Year! Let’s toast to yesterday’s achievements and tomorrow’s bright future. Célébrez le passage vers 2027 avec la plus grande soirée de prestige à Cotonou.
+            Bonne et heureuse année 2027 ! Portons un toast aux accomplissements d'hier et à l'avenir prometteur de demain. Célébrez le passage vers 2027 lors de la plus grande soirée de prestige à Cotonou.
           </p>
 
           {/* PROMINENT KEY ELEMENT: The Grand Countdown to 2027 */}
@@ -81,7 +81,7 @@ export default function Hero({ onExplore, onNavigateTickets }) {
             </div>
           </div>
 
-          {/* Action Button (Inspired by the purple rounded button 'More') */}
+          {/* Action Button */}
           <div className="welcome-cta-row">
             <button className="welcome-pill-btn" onClick={onNavigateTickets}>
               <span>Découvrir les Formules (FCFA)</span>
@@ -93,28 +93,13 @@ export default function Hero({ onExplore, onNavigateTickets }) {
           </div>
         </div>
 
-        {/* Right Side: High-Resolution 3D Metallic 2027 Foliage & Water Artwork */}
-        <div className="welcome-hero-artwork">
-          <div className="artwork-wrapper">
-            <img
-              src="/assets/welcome_2027.jpg"
-              alt="Welcome 2027 3D Artwork"
-              className="artwork-image"
-            />
-            {/* Soft decorative floating lotus flowers matching artwork */}
-            <div className="floating-lotus lotus-1">
-              <svg viewBox="0 0 40 40" width="36" height="36" fill="none">
-                <path d="M20 5C22 13 28 17 35 20C28 23 22 27 20 35C18 27 12 23 5 20C12 17 18 13 20 5Z" fill="#f472b6" opacity="0.9" />
-                <circle cx="20" cy="20" r="4" fill="#fde047" />
-              </svg>
-            </div>
-            <div className="floating-lotus lotus-2">
-              <svg viewBox="0 0 40 40" width="28" height="28" fill="none">
-                <path d="M20 5C22 13 28 17 35 20C28 23 22 27 20 35C18 27 12 23 5 20C12 17 18 13 20 5Z" fill="#fb7185" opacity="0.85" />
-                <circle cx="20" cy="20" r="3" fill="#fde047" />
-              </svg>
-            </div>
-          </div>
+        {/* Right Side: Image affichée au complet sans border ni container */}
+        <div className="welcome-hero-media">
+          <img
+            src="/assets/welcome_2027.jpg"
+            alt="Célébration 2027 au Bénin"
+            className="hero-full-artwork"
+          />
         </div>
       </div>
     </section>

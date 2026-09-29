@@ -19,8 +19,7 @@ export default function Footer({ onNavigatePage }) {
           {/* Brand Col */}
           <div className="footer-brand-column">
             <div className="footer-brand-title">
-              <span className="brand-logo-text">welcome2027</span>
-              <span className="brand-country-pill">BÉNIN</span>
+              <span className="brand-logo-text">2027 au Bénin</span>
             </div>
             <p className="footer-brand-description">
               Le rendez-vous officiel des célébrations du Nouvel An 2027 à Cotonou. Une expérience d'exception entre prestige, culture et gastronomie.
@@ -31,8 +30,8 @@ export default function Footer({ onNavigatePage }) {
           <div className="footer-nav-column">
             <h4 className="footer-nav-title">Navigation</h4>
             <ul className="footer-nav-links-list">
-              <li><button onClick={() => onNavigatePage('home')}>Home</button></li>
-              <li><button onClick={() => onNavigatePage('about')}>About</button></li>
+              <li><button onClick={() => onNavigatePage('home')}>Accueil</button></li>
+              <li><button onClick={() => onNavigatePage('about')}>À propos</button></li>
               <li><button onClick={() => onNavigatePage('programme')}>Programme 2027</button></li>
               <li><button onClick={() => onNavigatePage('tickets')}>Billetterie en FCFA</button></li>
               <li><button onClick={() => onNavigatePage('contact')}>Contact & Accès</button></li>
