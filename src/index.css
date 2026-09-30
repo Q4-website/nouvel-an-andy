@@ -2133,4 +2133,110 @@ button {
   }
 }
 
+/* ==========================================================================
+   SECTION QUESTIONS FRÉQUENTES (FAQ) — THÈME CLAIR, SANS OMBRE
+   ========================================================================== */
+.home-faq-section {
+  width: 100%;
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.home-section-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.section-title-wrap {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.home-section-heading {
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+.home-section-lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.faq-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: none !important;
+  transition: border-color 0.25s ease;
+}
+
+.faq-card:hover,
+.faq-card.open {
+  border-color: #c7d2fe;
+  box-shadow: none !important;
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 1.8rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 1.2rem;
+  font-family: inherit;
+}
+
+.faq-question-text {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.45;
+}
+
+.faq-arrow-icon {
+  color: var(--primary-indigo);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.faq-arrow-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.faq-answer-pane {
+  padding: 0 1.8rem 1.6rem 1.8rem;
+  color: var(--text-body);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  border-top: 1px solid #f1f5f9;
+  background: #fcfdfe;
+}
+
+.faq-answer-pane p {
+  margin: 0;
+  padding-top: 1rem;
+}
+
+
 
